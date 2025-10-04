@@ -7,11 +7,13 @@ import Navbar from './components/navigation/Navbar'
 import FullScreenNav from './components/navigation/FullScreenNav'
 
 
+
+
 const App = () => {
-   
+    
+
   return (
   
-
     <div className='overflow-x-hidden' >
       <Navbar />
       <FullScreenNav />
