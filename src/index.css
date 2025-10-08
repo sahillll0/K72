@@ -42,3 +42,12 @@ body{
 
 
 
+.card1, .card2 {
+  opacity: 0;
+  transform: translateY(100vh);
+  will-change: transform;
+}
+
+.saction3 {
+  perspective: 1000px;
+}
