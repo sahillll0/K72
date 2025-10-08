@@ -4,7 +4,7 @@ import compression from 'vite-plugin-compression'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/k72/',
+  
   plugins: [
     react(),
     tailwindcss(),
@@ -13,6 +13,7 @@ export default defineConfig({
       ext: '.gz'
     })
   ],
+  base: './',
   build: {
     minify: 'terser',
     cssMinify: true,
@@ -20,7 +21,14 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          gsap: ['gsap']
+          gsap: ['gsap'],
+          outDir: 'dist',
+          assetsDir: 'assets',
+          rollupOptions: {
+            input: {
+              main: './src/main.jsx'
+            }
+          }
         }
       }
     },
